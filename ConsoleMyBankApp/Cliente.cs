@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleMyBankApp
 {
-    class Cliente
+    public class Cliente
     {
         public string nome;
         public string cpf;
@@ -19,7 +19,7 @@ namespace ConsoleMyBankApp
             this.setProfissao(profissao);
         }
 
-        public string getNome() {
+        public virtual string getNome() {
             return this.nome;
         }
 

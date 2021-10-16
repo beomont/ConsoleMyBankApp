@@ -33,7 +33,7 @@ namespace ConsoleMyBankApp
 
 			Console.WriteLine("\nSeu saldo após o saque é de R${0}.", conta.getSaldo());
 
-			//NOVA-CONTA
+			//NOVA-CONTA_CORRENTE
 			Cliente clienteSabrina = new Cliente("Sabrina Kopehagen", "000.000.444-52", "Cantora");
 			ContaCorrente contaSabrina = new ContaCorrente(clienteSabrina, 01, 0002);
 
@@ -43,6 +43,14 @@ namespace ConsoleMyBankApp
 			Console.WriteLine("\nSeu saldo é de R${0}!", conta.getSaldo());
 			Console.WriteLine("\nO saldo da conta da {1} é de R${0}!", contaSabrina.getSaldo(), contaSabrina.getTitular().getNome());
 
+			//NOVA CONTA_PUPANÇA
+
+			ContaPoupanca contaPoupanca = new ContaPoupanca(cliente, 01, 0003);
+
+			Console.WriteLine("Conta Poupança criada!");
+			Console.WriteLine("\nTitular: {0}", contaPoupanca.getTitular().getNome());
+			Console.WriteLine("Agencia: {0}", contaPoupanca.getAgencia());
+			Console.WriteLine("Conta: {0}", contaPoupanca.getConta());
 
 		}
 	}
